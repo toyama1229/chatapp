@@ -1,7 +1,9 @@
 # 開発環境
-Java:17
-Spring Boot:3.5.6
-mysql:8.0.43
+- Java 21  
+- Spring Boot 3.5.6  
+- MySQL 8.0.43  
+
+---
 
 #  データベース構成
 このプロジェクトでは **MySQL** を使用しています。  
