@@ -24,8 +24,8 @@ mysql:8.0.43
 | カラム名 | 型 | NULL許可 | デフォルト | 主キー | 説明 |
 |-----------|----|----------|-------------|---------|------|
 | `id` | INT | NO | NULL | ✅ | auto_increment |
-| `username` | VARCHAR(50) | NO |  |  | ユーザー名 |
-| `password` | VARCHAR(50) | NO |  |  | パスワード |
+| `username` | VARCHAR(50) | NO | NULL |  | ユーザー名 |
+| `password` | VARCHAR(50) | NO | NULL |  | パスワード |
 
 ---
 
@@ -34,10 +34,10 @@ mysql:8.0.43
 | カラム名 | 型 | NULL許可 | デフォルト | 主キー | 説明 |
 |-----------|----|----------|-------------|---------|------|
 | `id` | INT | NO | NULL | ✅ | auto_increment |
-| `sender_id` | INT | NO |  |  | 送信者ユーザーID |
-| `receiver_id` | INT | NO |  |  | 受信者ユーザーID |
-| `message` | TEXT | NO |  |  | メッセージ本文 |
-| `created_at` | DATETIME | NO |  |  | 作成日時 |
+| `sender_id` | INT | NO | NULL |  | 送信者ユーザーID |
+| `receiver_id` | INT | NO | NULL |  | 受信者ユーザーID |
+| `message` | TEXT | NO | NULL |  | メッセージ本文 |
+| `created_at` | DATETIME | NO | NULL |  | 作成日時 |
 
 ---
 
@@ -46,5 +46,5 @@ mysql:8.0.43
 | カラム名 | 型 | NULL許可 | デフォルト | 主キー | 説明 |
 |-----------|----|----------|-------------|---------|------|
 | `id` | INT | NO | NULL | ✅ | auto_increment |
-| `name` | VARCHAR(50) | NO |  |  | 名前 |
-| `created_at` | DATETIME | NO |  |  | 作成日時 |
+| `name` | VARCHAR(50) | NO | NULL |  | 名前 |
+| `created_at` | DATETIME | NO | NULL |  | 作成日時 |
