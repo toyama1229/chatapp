@@ -1,0 +1,29 @@
+package com.example.chatapp.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.messaging.simp.config.MessageBrokerRegistry;
+import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
+import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
+
+@Configuration
+@EnableWebSocketMessageBroker
+public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+
+    @Override
+    public void registerStompEndpoints(StompEndpointRegistry registry) {
+        // フロントと通信するエンドポイント
+        registry.addEndpoint("/ws-chat")
+                .setAllowedOriginPatterns("*")
+                .withSockJS(); // SockJS対応（ブラウザ互換用）
+    }
+
+    @Override
+    public void configureMessageBroker(MessageBrokerRegistry registry) {
+        // クライアント → サーバー送信先
+        registry.setApplicationDestinationPrefixes("/app");
+
+        // サーバー → クライアント送信先
+        registry.enableSimpleBroker("/topic");
+    }
+}
