@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャット画面デモ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-body">
+  <!-- ヘッダー -->
+  <header class="top-menu">
+    <h1 class="home-title">📚資格勉強チャットアプリ</h1>
+    <nav>
+      <button id="homeBtn">🏠 ホーム</button>
+      <button id="chatBtn">💬 チャット</button>
+      <button id="postentranceBtn">📚 記録</button>
+      <button id="logoutBtn">🚪 ログアウト</button>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="chat-main">
+    <!--左側：グループリスト-->
+    <aside class="group-list">
+        <h2>グループ一覧</h2>
+        <ul id="groupList">
+            <li data-group="資格全般">資格全般</li>
+            <li data-group="ITパスポート">ITパスポート</li>
+            <li data-group="基本情報技術者試験">基本情報技術者試験</li>
+            <li data-group="JavaSilver">JavaSilver</li>
+        </ul>
+    </aside>
+
+    <!--右側：チャット画面-->
+    <div class="chat-container">
+        <h2 id="chatTitle">グループを選択してください</h2>
+        <ul id="messages"></ul>
+
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="メッセージを入力">
+            <button id="sendBtn">送信</button>
+        </div>
+    </div>
+  </main>
+  
+  <script>
+       // ボタン動作
+    document.getElementById('homeBtn').addEventListener('click', () => {
+      window.location.href = 'home.html';
+    });
+    document.getElementById('chatBtn').addEventListener('click', () => {
+      window.location.href = 'chat.html';
+    });
+     document.getElementById('postentranceBtn').addEventListener('click', () => {
+      window.location.href = 'post.html';
+    });
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('chatUser');
+      window.location.href = 'index.html';
+    }); 
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
