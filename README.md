@@ -33,19 +33,19 @@
 
 ---
 
-##  room テーブル
+##  message テーブル
 
 | カラム名 | 型 | NULL許可 | デフォルト | 主キー | 説明 |
 |-----------|----|----------|-------------|---------|------|
 | `id` | INT | NO | NULL | ✅ | auto_increment |
 | `sender_id` | INT | NO | NULL |  | 送信者ユーザーID |
-| `receiver_id` | INT | NO | NULL |  | 受信者ユーザーID |
+| `room_id` | INT | NO | NULL |  | 受信者ユーザーID |
 | `message` | TEXT | NO | NULL |  | メッセージ本文 |
 | `created_at` | DATETIME | NO | NULL |  | 作成日時 |
 
 ---
 
-##  message テーブル
+##  room テーブル
 
 | カラム名 | 型 | NULL許可 | デフォルト | 主キー | 説明 |
 |-----------|----|----------|-------------|---------|------|
