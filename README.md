@@ -39,7 +39,7 @@
 |-----------|----|----------|-------------|---------|------|
 | `id` | INT | NO | NULL | ✅ | auto_increment |
 | `sender_id` | INT | NO | NULL |  | 送信者ユーザーID |
-| `room_id` | INT | NO | NULL |  | 受信者ユーザーID |
+| `group_name` | INT | NO | NULL |  | 受信者ユーザーID |
 | `message` | TEXT | NO | NULL |  | メッセージ本文 |
 | `created_at` | DATETIME | NO | NULL |  | 作成日時 |
 
